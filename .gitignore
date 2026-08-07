@@ -48,9 +48,6 @@ web_modules/
 *.tsbuildinfo
 next-env.d.ts
 
-# npm lockfile (regenerate via `npm install`)
-package-lock.json
-
 # Optional npm cache directory
 .npm
 
