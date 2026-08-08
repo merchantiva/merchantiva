@@ -10,7 +10,6 @@ const links = [
   { href: "/resources", label: "Resources" },
   { href: "/academy", label: "Academy" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -34,7 +33,7 @@ export default function Nav() {
         </nav>
 
         <Link
-          href="/contact"
+          href="/start"
           className="hidden rounded-md bg-cyan px-[22px] py-[10px] text-sm font-semibold text-navy transition-colors hover:bg-cyan-hover lg:inline-block"
         >
           Start Here
@@ -81,7 +80,7 @@ export default function Nav() {
             ))}
           </nav>
           <Link
-            href="/contact"
+            href="/start"
             onClick={() => setOpen(false)}
             className="mt-3 block rounded-md bg-cyan px-[22px] py-3 text-center text-sm font-semibold text-navy transition-colors hover:bg-cyan-hover"
           >

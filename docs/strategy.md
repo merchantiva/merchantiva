@@ -63,6 +63,32 @@ These are capabilities Merchantiva develops — not necessarily the order in whi
 | Growth & Automation | Generate sales and improve the business | Paid advertising, SEO, email marketing, conversion optimization, marketing automation, AI automation, analytics, operations systems |
 | Exit | Prepare and facilitate eventual sale | Exit planning, acquisition preparation, valuation preparation, buyer research, sale preparation |
 
+## Customer Engagement Funnel (Monetization Loop)
+The Business Model table above describes *capabilities*. This describes how a visitor actually moves through them and becomes a paying customer — the real monetization loop, and the thing the website should be architected around:
+
+**Attract → Help → Involve → Identify Need → Solve Need → Expand Relationship**
+
+Not: Website → Contact form → Hope they buy something.
+
+**The free layer is not the business model — it's the entry point into the relationship.** An entrepreneur can enter at nearly any level:
+
+| Engagement | What Merchantiva gives them | Revenue |
+|---|---|---|
+| Discover | Free articles, videos, tools, newsletter | $0 |
+| Explore | Free resources, opportunity content, lifecycle guidance | $0 |
+| Learn | Academy, workshops, templates, office hours | Paid |
+| Get Help | Personalized research/strategy and recommendations | Paid |
+| Build | Store, launch, technical implementation | Paid |
+| Grow | Customer acquisition and conversion work | Paid |
+| Scale | Automation, systems, optimization | Paid |
+| Continue | Ongoing support / recurring services | Recurring |
+| Eventually Exit | Exit preparation and transaction-related help | Paid |
+
+**Funnel architecture:**
+FREE (Content → Resources → Lifecycle guidance → Email) → LOW COMMITMENT (Academy, templates, workshops, office hours, personalized guidance) → HIGHER COMMITMENT (Start a business, launch a store, get customers, scale operations) → ONGOING (Growth, automation, optimization, strategic support) → HIGH-VALUE (Expansion, exit)
+
+**The commercial model in one line: lifecycle monetization** — acquire an entrepreneur early, earn trust through useful low-friction help, monetize progressively more valuable jobs as their business develops. This is why the homepage's lifecycle selector isn't just navigation — it's the funnel's entry point. See `docs/website.md` for how "Start Here" and the lifecycle selector implement this functionally (stage selection → immediate free value → email capture → progressively higher-commitment offers), not just as a link to a page.
+
 ## Lead Generation Strategy
 Merchantiva attracts entrepreneurs by publishing valuable ecommerce intelligence.
 

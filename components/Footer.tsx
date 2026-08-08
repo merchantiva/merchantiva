@@ -10,7 +10,6 @@ const exploreLinks = [
 const companyLinks = [
   { href: "/academy", label: "Academy" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Footer() {
@@ -73,7 +72,7 @@ export default function Footer() {
             Start
           </div>
           <Link
-            href="/contact"
+            href="/start"
             className="text-sm font-semibold text-cyan transition-colors hover:text-cyan-hover"
           >
             Start Here →
