@@ -435,14 +435,6 @@ export const academyItems: AcademyItem[] = [
   { name: "Research Library", desc: "The intelligence behind every course." },
 ];
 
-export const aboutNots = [
-  "A generic ecommerce agency.",
-  "A dropshipping course.",
-  "A marketing-influencer brand.",
-  "A freelancer marketplace.",
-  "A research-report shop.",
-];
-
 export const brandTraits = [
   "Strategic",
   "Intelligent",

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { aboutNots, brandTraits } from "@/lib/content";
+import { brandTraits } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About — Merchantiva",
@@ -30,24 +30,6 @@ export default function AboutPage() {
             entrepreneurs. Merchantiva helps entrepreneurs figure out what to
             do, then helps them do it, across the entire lifecycle of
             building an ecommerce business, from first idea to eventual sale.
-          </p>
-        </div>
-
-        <div className="mb-14">
-          <div className="mb-3.5 text-xs font-bold uppercase tracking-[0.1em] text-cyan">
-            What Merchantiva is not
-          </div>
-          <div className="flex flex-col gap-2.5">
-            {aboutNots.map((item) => (
-              <div key={item} className="text-[15.5px] leading-relaxed text-[#C3CAD3]">
-                {item}
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 text-sm leading-relaxed text-gray">
-            Research is a capability that informs decisions and
-            implementation. It is never sold or presented as the standalone
-            thing you&apos;re buying.
           </p>
         </div>
 
