@@ -26,7 +26,7 @@ export default function AcademyPage() {
             answer.
           </p>
           <Link
-            href="/contact"
+            href="/start"
             className="inline-block rounded-md bg-cyan px-7 py-3.5 text-[15px] font-semibold text-navy transition-colors hover:bg-cyan-hover"
           >
             Join the waitlist
@@ -77,7 +77,7 @@ export default function AcademyPage() {
             className="rounded-md border border-white/15 bg-navy px-4 py-3.5 font-sans text-sm text-offwhite placeholder:text-gray sm:w-[280px]"
           />
           <Link
-            href="/contact"
+            href="/start"
             className="whitespace-nowrap rounded-md bg-cyan px-6 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-cyan-hover"
           >
             Join Waitlist

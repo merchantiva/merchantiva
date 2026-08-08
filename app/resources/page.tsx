@@ -40,7 +40,7 @@ export default function ResourcesPage() {
             className="rounded-md border border-white/15 bg-navy px-4 py-3.5 font-sans text-sm text-offwhite placeholder:text-gray sm:w-[280px]"
           />
           <Link
-            href="/contact"
+            href="/start"
             className="whitespace-nowrap rounded-md bg-cyan px-6 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-cyan-hover"
           >
             Subscribe
@@ -54,10 +54,11 @@ export default function ResourcesPage() {
             Downloads
           </h2>
           <p className="text-sm text-muted">
-            Templates and directories to work through each stage.
+            One guide per lifecycle stage — the same ones from the stage
+            selector on the Home and Start Here pages.
           </p>
         </div>
-        <div className="mx-auto grid max-w-[1240px] grid-cols-2 gap-4 sm:gap-4.5 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-[1240px] grid-cols-2 gap-4 sm:gap-4.5 lg:grid-cols-5">
           {resourceDownloads.map((dl) => (
             <div
               key={dl}

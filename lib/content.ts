@@ -32,6 +32,12 @@ export type PrimaryLifecycleStage = {
   subStageSlugs: string[];
   themeTags?: string[];
   themeNote?: string;
+  // Home/Start Here funnel content (docs/website.md, Home section table).
+  nextStep: string;
+  howWeHelp: string;
+  leadMagnet: string;
+  postSignupCta: string;
+  postSignupHref: string;
 };
 
 export const primaryLifecycleStages: PrimaryLifecycleStage[] = [
@@ -45,6 +51,12 @@ export const primaryLifecycleStages: PrimaryLifecycleStage[] = [
     progressFrom: "An idea or intention",
     progressTo: "A real ecommerce business that is ready to sell",
     subStageSlugs: ["discover", "validate", "launch"],
+    nextStep: "Figure out what you're going to sell",
+    howWeHelp:
+      "We help you research the opportunity, validate demand, and get a store built and ready to launch.",
+    leadMagnet: "[PLACEHOLDER: Ecommerce Startup Guide]",
+    postSignupCta: "Get help figuring out what to sell →",
+    postSignupHref: "/services",
   },
   {
     num: "02",
@@ -56,6 +68,12 @@ export const primaryLifecycleStages: PrimaryLifecycleStage[] = [
     progressFrom: "A launched business with an unproven market",
     progressTo: "A business with real customers and evidence of demand",
     subStageSlugs: ["acquire-customers"],
+    nextStep: "Turn your store into a business that gets customers",
+    howWeHelp:
+      "We help you find the right channels, fix what's stopping people from buying, and land your first real customers.",
+    leadMagnet: "[PLACEHOLDER: First Sales Checklist]",
+    postSignupCta: "Get help turning traffic into sales →",
+    postSignupHref: "/services",
   },
   {
     num: "03",
@@ -70,6 +88,12 @@ export const primaryLifecycleStages: PrimaryLifecycleStage[] = [
     themeTags: ["Profitability", "Operations", "Systems", "Automation", "Retention"],
     themeNote:
       "This stage is a cross-cutting theme, not one inherited stage — it spans work that used to sit under multiple old categories: conversion, retention, inventory, analytics, automation, CRM, SOPs, delegation, and reducing owner dependence. The distinction that matters: Build means making the business work.",
+    nextStep: "Make the business work better and become profitable",
+    howWeHelp:
+      "We help you find where you're losing money, build repeatable systems, and make the business less dependent on you.",
+    leadMagnet: "[PLACEHOLDER: Profitability Audit Guide]",
+    postSignupCta: "Get help making it profitable →",
+    postSignupHref: "/services",
   },
   {
     num: "04",
@@ -81,6 +105,12 @@ export const primaryLifecycleStages: PrimaryLifecycleStage[] = [
     progressFrom: "A stable, profitable business",
     progressTo: "A larger, more capable, more valuable company",
     subStageSlugs: ["scale", "expand"],
+    nextStep: "Grow without everything depending on you",
+    howWeHelp:
+      "We help you scale acquisition, build a team, and expand without losing control of the business.",
+    leadMagnet: "[PLACEHOLDER: Scaling Readiness Guide]",
+    postSignupCta: "Get help scaling without losing control →",
+    postSignupHref: "/services",
   },
   {
     num: "05",
@@ -92,6 +122,12 @@ export const primaryLifecycleStages: PrimaryLifecycleStage[] = [
     progressFrom: "Owning and operating a valuable business",
     progressTo: "A business prepared for a strategic transaction or other value realization",
     subStageSlugs: ["exit"],
+    nextStep: "Prepare the business for its next chapter",
+    howWeHelp:
+      "We help you strengthen the business, prepare your financials, and get ready for a sale or other exit.",
+    leadMagnet: "[PLACEHOLDER: Exit Readiness Checklist]",
+    postSignupCta: "Talk about maximizing your business's value →",
+    postSignupHref: "/start",
   },
 ];
 
@@ -377,12 +413,11 @@ export const resourceArticles: ArticleTeaser[] = [
   { tag: "Exit", title: "[PLACEHOLDER: Exit-stage article title]" },
 ];
 
-export const resourceDownloads = [
-  "[PLACEHOLDER: Opportunity report]",
-  "[PLACEHOLDER: Launch checklist]",
-  "[PLACEHOLDER: Supplier directory]",
-  "[PLACEHOLDER: Planning template]",
-];
+// Same stage-mapped lead magnet set used in the Home/Start Here funnel —
+// not a separate generic list (docs/website.md, Resources section).
+export const resourceDownloads = primaryLifecycleStages.map(
+  (stage) => stage.leadMagnet,
+);
 
 export type AcademyItem = {
   name: string;
@@ -416,14 +451,4 @@ export const brandTraits = [
   "Trustworthy",
   "Modern",
   "Entrepreneurial",
-];
-
-export const contactStages = [
-  "Discover",
-  "Validate",
-  "Launch",
-  "Acquire Customers",
-  "Scale",
-  "Expand",
-  "Exit",
 ];

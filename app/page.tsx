@@ -4,6 +4,7 @@ import {
   engines,
   primaryLifecycleStages,
 } from "@/lib/content";
+import StageFunnel from "@/components/StageFunnel";
 
 export default function Home() {
   return (
@@ -18,13 +19,12 @@ export default function Home() {
             Ecommerce guidance that turns into a working business.
           </h1>
           <p className="mb-9 max-w-[540px] text-[17px] leading-relaxed text-subtle">
-            Merchantiva helps ecommerce entrepreneurs figure out the next right
-            move, then helps them build it. From first idea through launch,
-            growth, and an eventual sale.
+            Merchantiva helps ecommerce entrepreneurs figure out what to do
+            next — and helps them do it.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/contact"
+              href="/start"
               className="rounded-md bg-cyan px-7 py-3.5 text-[15px] font-semibold text-navy transition-colors hover:bg-cyan-hover"
             >
               Start Here
@@ -58,36 +58,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* JOURNEY SELECTOR */}
+      {/* JOURNEY SELECTOR / FUNNEL ENTRY POINT */}
       <section className="bg-offwhite px-6 py-20 text-navy sm:px-8 lg:py-24">
         <div className="mx-auto mb-12 max-w-[640px] text-center">
           <h2 className="mb-3.5 font-serif text-[28px] font-semibold sm:text-[34px]">
             Where are you in your journey?
           </h2>
           <p className="text-base text-gray">
-            Every ecommerce business moves through the same five stages. Find
-            yours.
+            Pick your stage. Get a specific next step and something free to
+            help you take it.
           </p>
         </div>
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-4.5 sm:grid-cols-2 lg:grid-cols-5">
-          {primaryLifecycleStages.map((stage) => (
-            <Link
-              key={stage.slug}
-              href={`/lifecycle#${stage.slug}`}
-              className="block rounded-[10px] border border-navy/10 bg-white p-6 transition-colors hover:border-cyan"
-            >
-              <div className="mb-2.5 text-xs font-bold text-cyan">
-                {stage.num}
-              </div>
-              <div className="mb-1.5 text-[17px] font-bold">{stage.name}</div>
-              <div className="mb-3.5 text-[13.5px] leading-relaxed text-gray">
-                {stage.progressTo}
-              </div>
-              <div className="text-[13px] font-semibold text-navy">
-                Explore →
-              </div>
-            </Link>
-          ))}
+        <StageFunnel />
+      </section>
+
+      {/* FOUNDER STORY */}
+      <section className="bg-navy px-6 py-16 sm:px-8 lg:py-20">
+        <div className="mx-auto max-w-[720px]">
+          <div className="mb-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-cyan">
+            Why I Built Merchantiva
+          </div>
+          <p className="text-[17px] leading-relaxed text-subtle">
+            I&apos;ve always loved coming up with new business ideas — but a
+            good idea is only the beginning. Turning one into a business
+            takes research, decisions, execution, and often a team of people
+            who can do the things you can&apos;t, or can&apos;t do alone.
+            Once I learned how to bring the right people together, I was
+            able to turn more of my ideas into real businesses. That&apos;s
+            why I built Merchantiva: to help other ecommerce entrepreneurs
+            do the same.
+          </p>
         </div>
       </section>
 
@@ -224,7 +224,7 @@ export default function Home() {
               className="rounded-md border border-white/15 bg-navy px-4 py-3.5 font-sans text-sm text-offwhite placeholder:text-gray sm:w-[280px]"
             />
             <Link
-              href="/contact"
+              href="/start"
               className="whitespace-nowrap rounded-md bg-cyan px-6 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-cyan-hover"
             >
               Subscribe

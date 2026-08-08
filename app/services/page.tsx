@@ -48,7 +48,7 @@ export default function ServicesPage() {
               ))}
             </div>
             <Link
-              href="/contact"
+              href="/start"
               className="inline-block rounded-md bg-cyan px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cyan-hover"
             >
               Start Here
