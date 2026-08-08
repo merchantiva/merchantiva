@@ -3,13 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import { primaryLifecycleStages } from "@/lib/content";
+import { submitLead, CALENDLY_URL } from "@/lib/leadCapture";
+
+type Status = "idle" | "submitting" | "success" | "error";
 
 export default function StageFunnel() {
   const [selectedSlug, setSelectedSlug] = useState(
     primaryLifecycleStages[0].slug,
   );
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
   const selected =
     primaryLifecycleStages.find((s) => s.slug === selectedSlug) ??
@@ -18,14 +21,21 @@ export default function StageFunnel() {
   function selectStage(slug: string) {
     if (slug === selectedSlug) return;
     setSelectedSlug(slug);
-    setSubmitted(false);
+    setStatus("idle");
     setEmail("");
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email) return;
-    setSubmitted(true);
+    if (!email || status === "submitting") return;
+    setStatus("submitting");
+    const ok = await submitLead({
+      email,
+      stage: selected.name,
+      leadMagnet: selected.leadMagnet,
+      _subject: `New lead — ${selected.name}`,
+    });
+    setStatus(ok ? "success" : "error");
   }
 
   return (
@@ -73,7 +83,7 @@ export default function StageFunnel() {
           {selected.howWeHelp}
         </p>
 
-        {!submitted ? (
+        {status !== "success" ? (
           <form
             onSubmit={handleSubmit}
             className="mb-6 rounded-xl border border-navy/10 bg-offwhite p-5.5 sm:p-6"
@@ -92,23 +102,39 @@ export default function StageFunnel() {
               />
               <button
                 type="submit"
-                className="whitespace-nowrap rounded-md bg-cyan px-6 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-cyan-hover"
+                disabled={status === "submitting"}
+                className="whitespace-nowrap rounded-md bg-cyan px-6 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-cyan-hover disabled:opacity-60"
               >
-                Send it to me
+                {status === "submitting" ? "Sending…" : "Send it to me"}
               </button>
             </div>
+            {status === "error" && (
+              <p className="mt-3 text-[13px] text-red-400">
+                Something went wrong sending that — mind trying again?
+              </p>
+            )}
           </form>
         ) : (
           <div className="mb-6 rounded-xl border border-cyan/30 bg-offwhite p-5.5 sm:p-6">
-            <div className="mb-3 text-[14.5px] leading-relaxed text-navy">
+            <div className="mb-4 text-[14.5px] leading-relaxed text-navy">
               Check your inbox — {selected.leadMagnet} is on its way.
             </div>
-            <Link
-              href={selected.postSignupHref}
-              className="text-[13.5px] font-semibold text-cyan transition-colors hover:text-cyan-hover"
-            >
-              {selected.postSignupCta}
-            </Link>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2.5">
+              <Link
+                href={selected.postSignupHref}
+                className="text-[13.5px] font-semibold text-cyan transition-colors hover:text-cyan-hover"
+              >
+                {selected.postSignupCta}
+              </Link>
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-md bg-cyan px-5 py-2.5 text-[13.5px] font-semibold text-navy transition-colors hover:bg-cyan-hover"
+              >
+                Talk to us →
+              </a>
+            </div>
           </div>
         )}
 
