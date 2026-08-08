@@ -87,6 +87,23 @@ export default function LifecyclePage() {
                 </div>
               </div>
 
+              {subStages.length === 0 && stage.themeTags ? (
+                <div className="rounded-xl border border-white/10 bg-navy/25 p-6">
+                  <p className="mb-4 max-w-[720px] text-[14.5px] leading-relaxed text-[#C3CAD3]">
+                    {stage.themeNote}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {stage.themeTags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-cyan/30 px-3.5 py-1.5 text-[12.5px] font-medium text-cyan"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : (
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {subStages.map((sub) => (
                   <div
@@ -139,6 +156,7 @@ export default function LifecyclePage() {
                   </div>
                 ))}
               </div>
+              )}
             </div>
           </section>
         );

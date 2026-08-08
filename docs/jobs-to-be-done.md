@@ -25,17 +25,15 @@ Each of the five customer-facing stages in `docs/lifecycle.md` represents one ma
 | **Sell Your Business** | Help me maximize the value of what I've built. |
 
 ## Detailed Jobs (Internal Resolution)
-The seven detailed jobs — same functional/emotional/social structure as before — nest underneath the five major jobs above. Not lost, just reorganized (again — see `docs/lifecycle.md` for the full remapping table, since it moved from the earlier four-stage version to this five-stage version):
+The seven old-model jobs — same functional/emotional/social structure as before — are preserved and redistributed thematically underneath the five major jobs above. This is **not** a one-to-one mapping; the old seven stages aren't a competing architecture, they're a pool of preserved jobs. See `docs/lifecycle.md` for the full explanation of why (and don't debate individual stage-name placement — that's the wrong question to ask of this table):
 
-| Major Job | Detailed Stage | Job | Situation | Progress |
-|---|---|---|---|---|
-| Start Your Business | Discover | Help me find an opportunity worth pursuing | "I want to start a business but don't know what to sell" | Uncertainty → Confidence an opportunity exists |
-| Start Your Business | Validate | Help me determine if my idea can work | "I found an idea but don't know if it can work" | Idea → Validated opportunity |
-| Start Your Business | Launch | Help me turn my idea into an operating business | "I know what to sell, now I need to build it" | Validated idea → Real company |
-| Get Your First Sales | Acquire Customers | Help me generate consistent sales | "I launched, but I need customers" | Business existence → Customer acquisition |
-| Build a Profitable Business | Scale | Help me build a company that doesn't depend entirely on me | "I have sales but need better systems" | Founder-dependent → Scalable operation |
-| Grow Your Business | Expand | Help me increase the value of my business | "My business works — how do I grow it further?" | Successful store → Valuable business asset |
-| Sell Your Business | Exit | Help me turn my business into financial value | "I built a business, how do I prepare it for sale?" | Business owner → Successful exit |
+| Major Job | Job(s) absorbed from old model | Progress |
+|---|---|---|
+| Start Your Business | Discover + Validate + Launch — find an opportunity, determine if it can work, turn it into an operating business | Idea → Real, launched company |
+| Get Your First Sales | Acquire — generate consistent sales, prove people will buy | Launched business → Business with real customers |
+| Build a Profitable Business | Profitability, operations, systems, automation, retention (cross-cutting theme, not one old stage) — build a company that doesn't depend entirely on the founder | Founder-dependent → Scalable, profitable operation |
+| Grow Your Business | Scale + Expand, together — increase the value of the business, grow without losing control | Stable business → Larger, more valuable company |
+| Sell Your Business | Exit — turn the business into financial value | Business owner → Successful exit |
 
 Each detailed stage also carries **functional needs** (the practical tasks — research, setup, systems), **emotional needs** (mostly reducing fear/uncertainty and building confidence), and **social needs** (being seen as a legitimate, serious, successful entrepreneur). Copywriting for the five major jobs should speak to more than the functional layer — the emotional and social needs are what make the messaging land, not just the service list.
 

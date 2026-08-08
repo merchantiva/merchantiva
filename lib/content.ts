@@ -16,8 +16,11 @@ export const lifecycleStages: LifecycleStage[] = [
 ];
 
 // Primary customer-facing framework (docs/lifecycle.md). The seven stages
-// above are kept as the internal operating resolution, nested under these
-// five per the mapping table in docs/lifecycle.md.
+// above are internal decomposition, not a competing architecture — they're
+// a pool of preserved jobs redistributed thematically underneath these five,
+// not a one-to-one mapping. Most nest cleanly (subStageSlugs); "Build a
+// Profitable Business" is a cross-cutting theme owned by none of the seven,
+// so it carries themeTags instead of subStageSlugs.
 export type PrimaryLifecycleStage = {
   num: string;
   slug: string;
@@ -27,6 +30,8 @@ export type PrimaryLifecycleStage = {
   progressFrom: string;
   progressTo: string;
   subStageSlugs: string[];
+  themeTags?: string[];
+  themeNote?: string;
 };
 
 export const primaryLifecycleStages: PrimaryLifecycleStage[] = [
@@ -61,7 +66,10 @@ export const primaryLifecycleStages: PrimaryLifecycleStage[] = [
       "Demand is demonstrated; this is no longer an experiment. The challenge is building a stable, repeatable, profitable operation.",
     progressFrom: "A business with demonstrated demand",
     progressTo: "A stable, profitable business with repeatable systems",
-    subStageSlugs: ["scale"],
+    subStageSlugs: [],
+    themeTags: ["Profitability", "Operations", "Systems", "Automation", "Retention"],
+    themeNote:
+      "This stage is a cross-cutting theme, not one inherited stage — it spans work that used to sit under multiple old categories: conversion, retention, inventory, analytics, automation, CRM, SOPs, delegation, and reducing owner dependence. The distinction that matters: Build means making the business work.",
   },
   {
     num: "04",
@@ -72,7 +80,7 @@ export const primaryLifecycleStages: PrimaryLifecycleStage[] = [
       "The model and systems are proven; the entrepreneur wants substantial growth. Growth creates new complexity — more customers, products, employees, operations, capital, org complexity.",
     progressFrom: "A stable, profitable business",
     progressTo: "A larger, more capable, more valuable company",
-    subStageSlugs: ["expand"],
+    subStageSlugs: ["scale", "expand"],
   },
   {
     num: "05",
