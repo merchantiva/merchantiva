@@ -58,9 +58,11 @@ Kept as internal decomposition — used when designing specific offers, services
 |---|---|
 | Start Your Business | Discover, Validate, Launch |
 | Get Your First Sales | Acquire |
-| Build a Profitable Business | Early Scale, Optimization, Operations |
-| Grow Your Business | Scale, Expand |
+| Build a Profitable Business | Scale |
+| Grow Your Business | Expand |
 | Sell Your Business | Exit |
+
+> **Correction note:** an earlier version of this table said "Build a Profitable Business → Early Scale, Optimization, Operations" and "Grow Your Business → Scale, Expand" — but "Early Scale, Optimization, Operations" was never a defined sub-stage, only descriptive language copied from the source article without reconciling it against the seven sub-stages actually named below. Fixed to a clean one-to-one mapping (Scale → Build a Profitable Business, Expand → Grow Your Business) with no orphans or undefined terms.
 
 ### Discover
 **Goal:** Discover an ecommerce opportunity worth pursuing.

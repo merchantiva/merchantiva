@@ -31,7 +31,7 @@ Most existing companies focus on only one part of this journey — creating a ma
 The ecommerce entrepreneur does not need more isolated services. They need a trusted partner that understands where they are in their journey and provides the next knowledge, tools, and services required to progress. Merchantiva fills this gap by organizing around customer needs rather than individual offerings.
 
 ## Phase 2: Clarifying Strategy
-See `docs/positioning.md` (needs-based positioning, target customer) and `docs/lifecycle.md` (the 7-stage lifecycle) — those are the canonical, up-to-date versions of this phase.
+See `docs/positioning.md` (needs-based positioning, target customer) and `docs/lifecycle.md` (the 5-stage customer-facing lifecycle, Start Your Business → Get Your First Sales → Build a Profitable Business → Grow Your Business → Sell Your Business, with the original 7-stage breakdown kept as internal detail) — those are the canonical, up-to-date versions of this phase.
 
 ## Phase 3: Designing Identity
 
