@@ -41,16 +41,17 @@ For the actual tools, automation, and roles behind this engine, see `docs/ventur
 The four engines are connected, not siloed: Intelligence feeds the other three; Implementation and Growth both draw on Intelligence and often hand off to each other as a business matures. See `docs/strategy.md` — Merchantiva Delivery Model — for how this plays out within a single customer engagement.
 
 ## Customer Journey System
-A customer can enter at any stage, not just at the beginning:
+A customer can enter at any stage, not just at the beginning. This maps onto the 5-stage customer lifecycle in `docs/lifecycle.md`:
 
-| Entry Point | Need | Solutions |
-|---|---|---|
-| New Entrepreneur | "What should I sell?" | Research → Validation → Launch |
-| New Store Owner | "How do I get sales?" | Marketing → Automation → Optimization |
-| Growing Business Owner | "How do I scale?" | Systems → Growth → Expansion |
-| Established Owner | "How do I maximize value?" | Optimization → Exit Preparation |
+| Entry Point | Maps to Lifecycle Stage | Need | Solutions |
+|---|---|---|---|
+| New Entrepreneur | Start Your Business | "What should I sell?" | Research → Validation → Launch |
+| New Store Owner | Get Your First Sales | "How do I get sales?" | Marketing → Conversion → Retention |
+| Established Store Owner | Build a Profitable Business | "How do I make this work consistently?" | Systems → Operations → Automation |
+| Growing Business Owner | Grow Your Business | "How do I scale without losing control?" | Team → Advanced Growth → Expansion |
+| Established Owner | Sell Your Business | "How do I maximize value?" | Readiness → Valuation → Exit Preparation |
 
-This is why the site's Lifecycle page needs to support self-identification at any of the 7 stages, not assume every visitor starts at Discover — see `docs/website.md`.
+This is why the site's Lifecycle page needs to support self-identification at any of the 5 stages, not assume every visitor starts at Start Your Business — see `docs/website.md`.
 
 ## Delivery Framework
 Every engagement, regardless of which engine it primarily draws from, follows the same five-step loop:

@@ -35,6 +35,8 @@ Merchantiva creates value through four integrated activities that reinforce one 
 - **Community** — discussion groups, accountability, peer learning, office hours, live Q&A, member networking
 - **Implementation** — research, store launches, marketing, automation, analytics, growth consulting
 
+> **Note:** this list predates `docs/operating-model.md`'s four engines (Intelligence, Education/Academy, Implementation, Growth). Community wasn't dropped — it now lives inside Academy rather than standing alone as a fourth pillar, and Growth was added as its own engine to cover customer acquisition, conversion, and scaling work that this original list didn't clearly house anywhere. **`operating-model.md` is the current, authoritative version — use it, not this list, when building anything** (site copy, service structure, etc.). This section is kept for historical context on how the thinking evolved, not as a second source of truth.
+
 ## Competitive Advantage
 Merchantiva's competitive advantage comes from combining research, education, community, and implementation into one continuously improving ecosystem.
 
