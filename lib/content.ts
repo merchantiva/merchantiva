@@ -15,6 +15,78 @@ export const lifecycleStages: LifecycleStage[] = [
   { num: "07", slug: "exit", name: "Exit", goal: "Maximize value, prepare for sale." },
 ];
 
+// Primary customer-facing framework (docs/lifecycle.md). The seven stages
+// above are kept as the internal operating resolution, nested under these
+// five per the mapping table in docs/lifecycle.md.
+export type PrimaryLifecycleStage = {
+  num: string;
+  slug: string;
+  name: string;
+  jtbd: string;
+  situation: string;
+  progressFrom: string;
+  progressTo: string;
+  subStageSlugs: string[];
+};
+
+export const primaryLifecycleStages: PrimaryLifecycleStage[] = [
+  {
+    num: "01",
+    slug: "start-your-business",
+    name: "Start Your Business",
+    jtbd: "Help me figure out what to sell and get my ecommerce business started.",
+    situation:
+      "Has an idea, interest, or intention to start an ecommerce business but no functioning business with established demand yet.",
+    progressFrom: "An idea or intention",
+    progressTo: "A real ecommerce business that is ready to sell",
+    subStageSlugs: ["discover", "validate", "launch"],
+  },
+  {
+    num: "02",
+    slug: "get-your-first-sales",
+    name: "Get Your First Sales",
+    jtbd: "Help me get customers and prove people will buy.",
+    situation:
+      "The store exists and can accept orders, but demand hasn't been demonstrated consistently yet.",
+    progressFrom: "A launched business with an unproven market",
+    progressTo: "A business with real customers and evidence of demand",
+    subStageSlugs: ["acquire-customers"],
+  },
+  {
+    num: "03",
+    slug: "build-a-profitable-business",
+    name: "Build a Profitable Business",
+    jtbd: "Help me make the business consistently profitable and build the systems to support it.",
+    situation:
+      "Demand is demonstrated; this is no longer an experiment. The challenge is building a stable, repeatable, profitable operation.",
+    progressFrom: "A business with demonstrated demand",
+    progressTo: "A stable, profitable business with repeatable systems",
+    subStageSlugs: ["scale"],
+  },
+  {
+    num: "04",
+    slug: "grow-your-business",
+    name: "Grow Your Business",
+    jtbd: "Help me grow the business without losing control of it.",
+    situation:
+      "The model and systems are proven; the entrepreneur wants substantial growth. Growth creates new complexity — more customers, products, employees, operations, capital, org complexity.",
+    progressFrom: "A stable, profitable business",
+    progressTo: "A larger, more capable, more valuable company",
+    subStageSlugs: ["expand"],
+  },
+  {
+    num: "05",
+    slug: "sell-your-business",
+    name: "Sell Your Business",
+    jtbd: "Help me maximize the value of what I've built.",
+    situation:
+      "A meaningful business exists; the entrepreneur wants to maximize its value. Selling isn't the only possible outcome — this stage is about value realization and strategic options broadly.",
+    progressFrom: "Owning and operating a valuable business",
+    progressTo: "A business prepared for a strategic transaction or other value realization",
+    subStageSlugs: ["exit"],
+  },
+];
+
 export type Engine = {
   num: string;
   name: string;

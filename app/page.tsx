@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { articleTeasers, engines, lifecycleStages } from "@/lib/content";
+import {
+  articleTeasers,
+  engines,
+  primaryLifecycleStages,
+} from "@/lib/content";
 
 export default function Home() {
   return (
@@ -39,14 +43,14 @@ export default function Home() {
             The Merchantiva Lifecycle
           </div>
           <div className="flex flex-col gap-4.5 border-l-2 border-cyan/35 pl-5.5">
-            {lifecycleStages.map((stage) => (
+            {primaryLifecycleStages.map((stage) => (
               <div key={stage.slug} className="relative">
                 <div className="absolute -left-[29px] top-1 h-2 w-2 rounded-full bg-cyan" />
                 <div className="text-sm font-semibold text-offwhite">
                   {stage.name}
                 </div>
                 <div className="mt-0.5 text-[12.5px] text-muted">
-                  {stage.goal}
+                  {stage.progressTo}
                 </div>
               </div>
             ))}
@@ -61,12 +65,12 @@ export default function Home() {
             Where are you in your journey?
           </h2>
           <p className="text-base text-gray">
-            Every ecommerce business moves through the same seven stages. Find
+            Every ecommerce business moves through the same five stages. Find
             yours.
           </p>
         </div>
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-4.5 sm:grid-cols-2 lg:grid-cols-4">
-          {lifecycleStages.map((stage) => (
+        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-4.5 sm:grid-cols-2 lg:grid-cols-5">
+          {primaryLifecycleStages.map((stage) => (
             <Link
               key={stage.slug}
               href={`/lifecycle#${stage.slug}`}
@@ -77,7 +81,7 @@ export default function Home() {
               </div>
               <div className="mb-1.5 text-[17px] font-bold">{stage.name}</div>
               <div className="mb-3.5 text-[13.5px] leading-relaxed text-gray">
-                {stage.goal}
+                {stage.progressTo}
               </div>
               <div className="text-[13px] font-semibold text-navy">
                 Explore →
